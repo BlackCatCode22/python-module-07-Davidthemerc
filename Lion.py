@@ -19,7 +19,7 @@ class Lion(Animal):
         # Iterate through the lines in the file
         line_num = 1
         for line in lines:
-            if line_num==3:
+            if line_num==7:
                 list_of_lion_names.extend(line.strip().split(","))
                 break
             else:
