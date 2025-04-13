@@ -4,7 +4,7 @@
 from Animal import Animal
 from Hyena import Hyena
 from Lion import Lion
-# from Bear import Bear
+from Bear import Bear
 
 from _datetime import date
 
@@ -84,6 +84,15 @@ def process_one_line(one_line):
         # add to the Lion list
         list_of_lions.append(my_lion)
 
+    if "bear" in a_species:
+        # Create a bear object
+        my_bear = Bear("aName","anID", birth_day, color, a_sex, weight, from_zoo, current_date)
+        # Fill in Name and Unique ID
+        my_bear.name = Bear.get_bear_name(my_bear)
+        my_bear.animal_id = "Lio" + str(Bear.numOfBears).zfill(2)
+        # add to the Bear list
+        list_of_bears.append(my_bear)
+
 # ArrivingAnimals.txt read one line at a time
 # Open the file in read mode
 file_path = "arrivingAnimals.txt"
@@ -118,3 +127,8 @@ print("Lion Habitat")
 print()
 for lion in list_of_lions:
     print (lion.animal_id + "," + lion.name + "; " + lion.make_sound() + "; birthdate " + str(lion.birth_date) + "; " + lion.color + "; " + lion.sex + "; " + lion.weight + "; " + lion.originating_zoo + "; arrived " + str(lion.arrival_date))
+print()
+print("Bear Habitat")
+print()
+for bear in list_of_bears:
+    print (bear.animal_id + "," + bear.name + "; " + bear.make_sound() + "; birthdate " + str(bear.birth_date) + "; " + bear.color + "; " + bear.sex + "; " + bear.weight + "; " + bear.originating_zoo + "; arrived " + str(bear.arrival_date))
