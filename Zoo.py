@@ -153,3 +153,24 @@ print("Tiger Habitat")
 print()
 for tiger in list_of_tigers:
     print (tiger.animal_id + "," + tiger.name + "; " + tiger.make_sound() + "; birthdate " + str(tiger.birth_date) + "; " + tiger.color + "; " + tiger.sex + "; " + tiger.weight + "; " + tiger.originating_zoo + "; arrived " + str(tiger.arrival_date))
+
+# Write Zoo Population to file
+fileout = open('zoopopulation.txt','w')
+fileout.write("Zookeeper's Challenge Zoo Population\n")
+fileout.write("====================================\n\n")
+fileout.write("Hyena Habitat\n")
+fileout.write("=============\n\n")
+for hyena in list_of_hyenas:
+    fileout.write (hyena.animal_id + "," + hyena.name + "; " + hyena.make_sound() + "; birthdate " + str(hyena.birth_date) + "; " + hyena.color + "; " + hyena.sex + "; " + hyena.weight + "; " + hyena.originating_zoo + "; arrived " + str(hyena.arrival_date) + "\n")
+fileout.write("\nLion Habitat\n")
+fileout.write("============\n\n")
+for lion in list_of_lions:
+    fileout.write (lion.animal_id + "," + lion.name + "; " + lion.make_sound() + "; birthdate " + str(lion.birth_date) + "; " + lion.color + "; " + lion.sex + "; " + lion.weight + "; " + lion.originating_zoo + "; arrived " + str(lion.arrival_date) + "\n")
+fileout.write("\nBear Habitat\n")
+fileout.write("============\n\n")
+for bear in list_of_bears:
+    fileout.write (bear.animal_id + "," + bear.name + "; " + bear.make_sound() + "; birthdate " + str(bear.birth_date) + "; " + bear.color + "; " + bear.sex + "; " + bear.weight + "; " + bear.originating_zoo + "; arrived " + str(bear.arrival_date) + "\n")
+fileout.write("\nTiger Habitat\n")
+fileout.write("=============\n\n")
+for tiger in list_of_tigers:
+    fileout.write (tiger.animal_id + "," + tiger.name + "; " + tiger.make_sound() + "; birthdate " + str(tiger.birth_date) + "; " + tiger.color + "; " + tiger.sex + "; " + tiger.weight + "; " + tiger.originating_zoo + "; arrived " + str(tiger.arrival_date) + "\n")
