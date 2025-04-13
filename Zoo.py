@@ -5,6 +5,7 @@ from Animal import Animal
 from Hyena import Hyena
 from Lion import Lion
 from Bear import Bear
+from Tiger import Tiger
 
 from _datetime import date
 
@@ -93,6 +94,15 @@ def process_one_line(one_line):
         # add to the Bear list
         list_of_bears.append(my_bear)
 
+    if "tiger" in a_species:
+        # Create a bear object
+        my_tiger = Tiger("aName","anID", birth_day, color, a_sex, weight, from_zoo, current_date)
+        # Fill in Name and Unique ID
+        my_tiger.name = Tiger.get_tiger_name(my_tiger)
+        my_tiger.animal_id = "Lio" + str(Tiger.numOfTigers).zfill(2)
+        # add to the Tiger list
+        list_of_tigers.append( my_tiger)
+
 # ArrivingAnimals.txt read one line at a time
 # Open the file in read mode
 file_path = "arrivingAnimals.txt"
@@ -113,6 +123,12 @@ print(f"\nNumber of hyenas created: {Hyena.numOfHyenas}")
 # Access the count variable numofHyenas
 print(f"\nNumber of lions created: {Lion.numOfLions}")
 
+# Access the count variable numofHyenas
+print(f"\nNumber of bears created: {Bear.numOfBears}")
+
+# Access the count variable numofHyenas
+print(f"\nNumber of tigers created: {Tiger.numOfTigers}")
+
 # Output the animals
 # Zoo population
 print()
@@ -132,3 +148,8 @@ print("Bear Habitat")
 print()
 for bear in list_of_bears:
     print (bear.animal_id + "," + bear.name + "; " + bear.make_sound() + "; birthdate " + str(bear.birth_date) + "; " + bear.color + "; " + bear.sex + "; " + bear.weight + "; " + bear.originating_zoo + "; arrived " + str(bear.arrival_date))
+print()
+print("Tiger Habitat")
+print()
+for tiger in list_of_tigers:
+    print (tiger.animal_id + "," + tiger.name + "; " + tiger.make_sound() + "; birthdate " + str(tiger.birth_date) + "; " + tiger.color + "; " + tiger.sex + "; " + tiger.weight + "; " + tiger.originating_zoo + "; arrived " + str(tiger.arrival_date))

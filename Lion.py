@@ -38,4 +38,9 @@ class Lion(Animal):
 
     # Get an unused lion name
     def get_lion_name(self):
+        # I noticed that since the first animal name in each list doesn't have the extra space that subsequent
+        # names have, this section needed code to add a space to that first name (and only that first name) in the
+        # list. The uneven space in the output bugged me.
+        if(self.list_of_lion_names[0][0]) != " ":
+            self.list_of_lion_names[0] = " " + self.list_of_lion_names[0]
         return self.list_of_lion_names.pop(0)
