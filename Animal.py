@@ -1,3 +1,4 @@
+# Added to support random selection of animal sounds
 import random
 
 class Animal:

@@ -7,7 +7,7 @@ class Lion(Animal):
     numOfLions = 0
 
     # List of possible lions sounds
-    list_of_lion_sounds = ["Hah", "Heh", "Gah", "Geh"]
+    list_of_lion_sounds = ["Roarrr!", "ROARRRRRRR!", "Hmmmph.", "ROAR! GRRRR!"]
 
     # List of lion names
     list_of_lion_names = []
