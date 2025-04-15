@@ -18,6 +18,7 @@ list_of_lions = []
 list_of_tigers = []
 list_of_bears = []
 list_of_visitors = []
+habitats = ["Hyena", "Lion", "Bear", "Tiger"]
 
 # Date variables
 current_date = date.today()
@@ -178,14 +179,23 @@ fileout.write("=============\n\n")
 for tiger in list_of_tigers:
     fileout.write (tiger.animal_id + "," + tiger.name + "; " + tiger.make_sound() + "; birthdate " + str(tiger.birth_date) + "; " + tiger.color + "; " + tiger.sex + "; " + tiger.weight + "; " + tiger.originating_zoo + "; arrived " + str(tiger.arrival_date) + "\n")
 
-# Let's have a visitor visit
-# Create a visitor object, a finite number of visitors
-random_num_of_visitors = random.randint(1,7)
+# Let's have some visitor(s) visit the zoo!
+# Create a visitor object, and a finite number of visitors
+random_num_of_visitors = random.randint(2,7)
 for i in range(random_num_of_visitors):
     money = random.randint(10, 100)
-    my_visitor = Visitor("aName", money)
+    habitat_to_visit = random.randint(0,3)
+    if habitat_to_visit == 0:
+        favname = list_of_hyenas[random.randint(0,len(list_of_hyenas)-1)].name
+    elif habitat_to_visit == 1:
+        favname = list_of_lions[random.randint(0,len(list_of_lions)-1)].name
+    elif habitat_to_visit == 2:
+        favname = list_of_bears[random.randint(0,len(list_of_bears)-1)].name
+    elif habitat_to_visit == 3:
+        favname = list_of_tigers[random.randint(0,len(list_of_tigers)-1)].name
+    my_visitor = Visitor("aName", money, habitat_to_visit)
     # Fill in Name and Unique ID
     my_visitor.name = Visitor.get_visitor_name(my_visitor)
     # add to the Visitor list
     list_of_visitors.append(my_visitor)
-    print(f"\nVisitor:{my_visitor.name} is visiting the Zoo with ${my_visitor.money} on hand.")
+    print(f"\nVisitor:{my_visitor.name} is visiting the Zoo with ${my_visitor.money} on hand. Their favorite habitat to visit was the {habitats[my_visitor.habitat_to_visit]} habitat. Their favorite animal was{favname}.")

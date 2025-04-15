@@ -29,10 +29,11 @@ class Visitor:
             else:
                 line_num += 1
 
-    def __init__(self, name, money):
+    def __init__(self, name, money, habitat_to_visit):
 
         self.name = name
         self.money = money
+        self.habitat_to_visit = habitat_to_visit
 
         # Add one every time this object is created
         Visitor.numOfVisitors += 1
