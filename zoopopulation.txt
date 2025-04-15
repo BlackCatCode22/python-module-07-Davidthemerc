@@ -4,31 +4,31 @@ Zookeeper's Challenge Zoo Population
 Hyena Habitat
 =============
 
-Hya01, Shenzi; Heh; birthdate 2021-03-21; tan color; female; 70 pounds; from Friguia Park, Tunisia; arrived 2025-04-13
-Hya02, Banzai; Heh; birthdate 2013-09-23; brown color; male; 150 pounds; from Friguia Park, Tunisia; arrived 2025-04-13
-Hya03, Ed; Geh; birthdate 2021-03-21; black color; male; 120 pounds; from Friguia Park, Tunisia; arrived 2025-04-13
-Hya04, Zig; Gah; birthdate 2017-01-01; black and tan striped color; female; 105 pounds; from Friguia Park, Tunisia; arrived 2025-04-13
+Hya01, Shenzi; Hah; birthdate 2021-03-21; tan color; female; 70 pounds; from Friguia Park, Tunisia; arrived 2025-04-14
+Hya02, Banzai; Geh; birthdate 2013-09-23; brown color; male; 150 pounds; from Friguia Park, Tunisia; arrived 2025-04-14
+Hya03, Ed; Gah; birthdate 2021-03-21; black color; male; 120 pounds; from Friguia Park, Tunisia; arrived 2025-04-14
+Hya04, Zig; Heh; birthdate 2017-01-01; black and tan striped color; female; 105 pounds; from Friguia Park, Tunisia; arrived 2025-04-14
 
 Lion Habitat
 ============
 
-Lio01, Scar; ROAR! GRRRR!; birthdate 2019-03-21; tan color; female; 300 pounds; from Zanzibar, Tanzania; arrived 2025-04-13
-Lio02, Mufasa; ROARRRRRRR!; birthdate 2013-12-21; dark tan color; female; 375 pounds; from KopeLion, Tanzania; arrived 2025-04-13
-Lio03, Simba; ROAR! GRRRR!; birthdate 2003-09-23; golden color; male; 450 pounds; from Zanzibar, Tanzania; arrived 2025-04-13
-Lio04, Kiara; ROARRRRRRR!; birthdate 2021-03-21; tan and brown color; female; 275 pounds; from KopeLion, Tanzania; arrived 2025-04-13
+Lio01, Scar; ROARRRRRRR!; birthdate 2019-03-21; tan color; female; 300 pounds; from Zanzibar, Tanzania; arrived 2025-04-14
+Lio02, Mufasa; ROARRRRRRR!; birthdate 2013-12-21; dark tan color; female; 375 pounds; from KopeLion, Tanzania; arrived 2025-04-14
+Lio03, Simba; Roarrr!; birthdate 2003-09-23; golden color; male; 450 pounds; from Zanzibar, Tanzania; arrived 2025-04-14
+Lio04, Kiara; Hmmmph.; birthdate 2021-03-21; tan and brown color; female; 275 pounds; from KopeLion, Tanzania; arrived 2025-04-14
 
 Bear Habitat
 ============
 
-Lio01, Yogi; Arrrgghhh.; birthdate 2018-03-21; brown color; male; 320 pounds; from Alaska Zoo, Alaska; arrived 2025-04-13
-Lio02, Smokey; GROWLLLL! GROWWWL!; birthdate 2000-03-21; black color; female; 425 pounds; from Woodland Park Zoo, Washington; arrived 2025-04-13
-Lio03, Paddington; GROWWWWLLL!; birthdate 2021-09-23; black color; female; 355 pounds; from Woodland Park Zoo, Washington; arrived 2025-04-13
-Lio04, Lippy; Arrrgghhh.; birthdate 2021-03-21; brown color; male; 405 pounds; from Alaska Zoo, Alaska; arrived 2025-04-13
+Lio01, Yogi; Arrrgghhh.; birthdate 2018-03-21; brown color; male; 320 pounds; from Alaska Zoo, Alaska; arrived 2025-04-14
+Lio02, Smokey; Growl!; birthdate 2000-03-21; black color; female; 425 pounds; from Woodland Park Zoo, Washington; arrived 2025-04-14
+Lio03, Paddington; Arrrgghhh.; birthdate 2021-09-23; black color; female; 355 pounds; from Woodland Park Zoo, Washington; arrived 2025-04-14
+Lio04, Lippy; Arrrgghhh.; birthdate 2021-03-21; brown color; male; 405 pounds; from Alaska Zoo, Alaska; arrived 2025-04-14
 
 Tiger Habitat
 =============
 
-Lio01, Tony; Snarl!; birthdate 2023-03-21; gold and tan stripes color; male; 270 pounds; from Dhaka, Bangladesh; arrived 2025-04-13
-Lio02, Tigger; Snarl!; birthdate 2021-03-21; black stripes color; female; 400 pounds; from Dhaka, Bangladesh; arrived 2025-04-13
-Lio03, Amber; RAWR!; birthdate 2007-09-23; gold and tan color; male; 300 pounds; from Bardia, Nepal; arrived 2025-04-13
-Lio04, Cosimia; They're Grrreat!; birthdate 2022-03-21; black stripes color; female; 285 pounds; from Bardia, Nepal; arrived 2025-04-13
+Lio01, Tony; Snarl!; birthdate 2023-03-21; gold and tan stripes color; male; 270 pounds; from Dhaka, Bangladesh; arrived 2025-04-14
+Lio02, Tigger; They're Grrreat!; birthdate 2021-03-21; black stripes color; female; 400 pounds; from Dhaka, Bangladesh; arrived 2025-04-14
+Lio03, Amber; They're Grrreat!; birthdate 2007-09-23; gold and tan color; male; 300 pounds; from Bardia, Nepal; arrived 2025-04-14
+Lio04, Cosimia; Snarl!; birthdate 2022-03-21; black stripes color; female; 285 pounds; from Bardia, Nepal; arrived 2025-04-14

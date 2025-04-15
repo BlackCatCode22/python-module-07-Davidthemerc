@@ -6,6 +6,8 @@ from Hyena import Hyena
 from Lion import Lion
 from Bear import Bear
 from Tiger import Tiger
+from Visitors import Visitor
+import random
 
 from _datetime import date
 
@@ -15,6 +17,7 @@ list_of_hyenas = []
 list_of_lions = []
 list_of_tigers = []
 list_of_bears = []
+list_of_visitors = []
 
 # Date variables
 current_date = date.today()
@@ -174,3 +177,15 @@ fileout.write("\nTiger Habitat\n")
 fileout.write("=============\n\n")
 for tiger in list_of_tigers:
     fileout.write (tiger.animal_id + "," + tiger.name + "; " + tiger.make_sound() + "; birthdate " + str(tiger.birth_date) + "; " + tiger.color + "; " + tiger.sex + "; " + tiger.weight + "; " + tiger.originating_zoo + "; arrived " + str(tiger.arrival_date) + "\n")
+
+# Let's have a visitor visit
+# Create a visitor object, a finite number of visitors
+random_num_of_visitors = random.randint(1,7)
+for i in range(random_num_of_visitors):
+    money = random.randint(10, 100)
+    my_visitor = Visitor("aName", money)
+    # Fill in Name and Unique ID
+    my_visitor.name = Visitor.get_visitor_name(my_visitor)
+    # add to the Visitor list
+    list_of_visitors.append(my_visitor)
+    print(f"\nVisitor:{my_visitor.name} is visiting the Zoo with ${my_visitor.money} on hand.")
