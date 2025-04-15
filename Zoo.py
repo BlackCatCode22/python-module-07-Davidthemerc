@@ -181,9 +181,13 @@ for tiger in list_of_tigers:
 
 # Let's have some visitor(s) visit the zoo!
 # Create a visitor object, and a finite number of visitors
+
+print("\nZookeeper's Zoo: Operating Hours, 8 AM to 9 PM. $10 General Admission fee.")
+print("==========================================================================")
+
 random_num_of_visitors = random.randint(2,7)
 for i in range(random_num_of_visitors):
-    money = random.randint(10, 100)
+    money = random.randint(5, 100)
     habitat_to_visit = random.randint(0,3)
     if habitat_to_visit == 0:
         favname = list_of_hyenas[random.randint(0,len(list_of_hyenas)-1)].name
@@ -198,4 +202,10 @@ for i in range(random_num_of_visitors):
     my_visitor.name = Visitor.get_visitor_name(my_visitor)
     # add to the Visitor list
     list_of_visitors.append(my_visitor)
-    print(f"\nVisitor:{my_visitor.name} is visiting the Zoo with ${my_visitor.money} on hand. Their favorite habitat to visit was the {habitats[my_visitor.habitat_to_visit]} habitat. Their favorite animal was{favname}.")
+    # Does the visitor have enough money ($10) to actually visit the zoo?
+    if my_visitor.money >= 10:
+        print(
+            f"\nVisitor:{my_visitor.name} is visiting the Zoo with ${my_visitor.money} on hand. Their favorite habitat to visit was the {habitats[my_visitor.habitat_to_visit]} habitat. Their favorite animal was{favname}.")
+    else:
+        print(
+            f"\nVisitor:{my_visitor.name} is visiting the Zoo with ${my_visitor.money} on hand. They sadly did not have enough money to visit the zoo.")
