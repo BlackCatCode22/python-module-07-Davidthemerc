@@ -1,0 +1,9 @@
+Zookeeper's Challenge Zoo Visitors
+====================================
+
+Zoo Visitors
+=============
+
+Sebastian visited the zoo today. They left with $2. Their favorite habitat to visit was the Hyena habitat. Their favorite animal was Zig. 
+Julian visited the zoo today. They left with $35. Their favorite habitat to visit was the Bear habitat. Their favorite animal was Lippy. 
+Zoe visited the zoo today. They left with $42. Their favorite habitat to visit was the Tiger habitat. Their favorite animal was Tony. 

@@ -185,10 +185,11 @@ for tiger in list_of_tigers:
 print("\nZookeeper's Zoo: Operating Hours, 8 AM to 9 PM. $10 General Admission fee.")
 print("==========================================================================")
 
-random_num_of_visitors = random.randint(2,7)
+random_num_of_visitors = random.randint(1,5)
 for i in range(random_num_of_visitors):
     money = random.randint(5, 100)
     habitat_to_visit = random.randint(0,3)
+    favname = ""
     if habitat_to_visit == 0:
         favname = list_of_hyenas[random.randint(0,len(list_of_hyenas)-1)].name
     elif habitat_to_visit == 1:
@@ -197,7 +198,7 @@ for i in range(random_num_of_visitors):
         favname = list_of_bears[random.randint(0,len(list_of_bears)-1)].name
     elif habitat_to_visit == 3:
         favname = list_of_tigers[random.randint(0,len(list_of_tigers)-1)].name
-    my_visitor = Visitor("aName", money, habitat_to_visit)
+    my_visitor = Visitor("aName", money, habitat_to_visit,favname)
     # Fill in Name and Unique ID
     my_visitor.name = Visitor.get_visitor_name(my_visitor)
     # add to the Visitor list
@@ -206,6 +207,19 @@ for i in range(random_num_of_visitors):
     if my_visitor.money >= 10:
         print(
             f"\nVisitor:{my_visitor.name} is visiting the Zoo with ${my_visitor.money} on hand. Their favorite habitat to visit was the {habitats[my_visitor.habitat_to_visit]} habitat. Their favorite animal was{favname}.")
+        my_visitor.money=my_visitor.money-10
+
     else:
         print(
             f"\nVisitor:{my_visitor.name} is visiting the Zoo with ${my_visitor.money} on hand. They sadly did not have enough money to visit the zoo.")
+
+# Write Zoo Population to file
+visfileout = open('zoovisitors.txt','w')
+visfileout.write("Zookeeper's Challenge Zoo Visitors\n")
+visfileout.write("====================================\n\n")
+visfileout.write("Zoo Visitors\n")
+visfileout.write("=============\n\n")
+for visitor in list_of_visitors:
+    message = (visitor.name + " visited the zoo today." + f" They left with ${visitor.money}." + f" Their favorite habitat to visit was the {habitats[visitor.habitat_to_visit]} habitat. Their favorite animal was{visitor.favname}. \n")
+    # Remove the leading space from the visitor names. It was useful before, now it's not.
+    visfileout.write(message.lstrip(" "))

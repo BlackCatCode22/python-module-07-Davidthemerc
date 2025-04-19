@@ -29,20 +29,29 @@ class Visitor:
             else:
                 line_num += 1
 
-    def __init__(self, name, money, habitat_to_visit):
+    def __init__(self, name, money, habitat_to_visit,favname):
 
         self.name = name
         self.money = money
         self.habitat_to_visit = habitat_to_visit
+        self.favname = favname
 
         # Add one every time this object is created
         Visitor.numOfVisitors += 1
 
     def get_visitor_name(self):
         rando = random.randint(0,len(self.list_of_visitor_names)-1)
-        # This piece of code is meant to prevent the first visitor name in the list from having the
-        # extra space contained in the txt file rendered into the output, just like I did for the
-        # animals. Those extra spaces will still annoy me!
+
+        # Error checking code, due to previously unknown issue with visitors.txt
+        # Check if the selected name is valid (not empty, not just whitespace)
+        if self.list_of_visitor_names[rando].strip() == "":
+            raise ValueError("Empty name found in the list. Please correct the 'visitors.txt' data.")
+            # Due to a correction in visitors.txt, this error doesn't exist anymore, but if it hypothetically did,
+            # this line would help address the issue and point it out to the dev.
+
+        # This piece of code is meant to add an extra leading space to the
+        # first visitor name in each row of visitors.txt, because all the other
+        # names have a leading space, and we don't want this name to be different.
         if (self.list_of_visitor_names[rando][0]) != " ":
             self.list_of_visitor_names[rando] = " " + self.list_of_visitor_names[rando]
         return self.list_of_visitor_names.pop(rando)
