@@ -94,7 +94,7 @@ def process_one_line(one_line):
         my_bear = Bear("aName","anID", birth_day, color, a_sex, weight, from_zoo, current_date)
         # Fill in Name and Unique ID
         my_bear.name = Bear.get_bear_name(my_bear)
-        my_bear.animal_id = "Lio" + str(Bear.numOfBears).zfill(2)
+        my_bear.animal_id = "Bea" + str(Bear.numOfBears).zfill(2)
         # add to the Bear list
         list_of_bears.append(my_bear)
 
@@ -103,7 +103,7 @@ def process_one_line(one_line):
         my_tiger = Tiger("aName","anID", birth_day, color, a_sex, weight, from_zoo, current_date)
         # Fill in Name and Unique ID
         my_tiger.name = Tiger.get_tiger_name(my_tiger)
-        my_tiger.animal_id = "Lio" + str(Tiger.numOfTigers).zfill(2)
+        my_tiger.animal_id = "Tig" + str(Tiger.numOfTigers).zfill(2)
         # add to the Tiger list
         list_of_tigers.append( my_tiger)
 
@@ -207,19 +207,25 @@ for i in range(random_num_of_visitors):
     if my_visitor.money >= 10:
         print(
             f"\nVisitor:{my_visitor.name} is visiting the Zoo with ${my_visitor.money} on hand. Their favorite habitat to visit was the {habitats[my_visitor.habitat_to_visit]} habitat. Their favorite animal was{favname}.")
-        my_visitor.money=my_visitor.money-10
+
 
     else:
         print(
             f"\nVisitor:{my_visitor.name} is visiting the Zoo with ${my_visitor.money} on hand. They sadly did not have enough money to visit the zoo.")
 
-# Write Zoo Population to file
+# Write Zoo Visitors to file
 visfileout = open('zoovisitors.txt','w')
 visfileout.write("Zookeeper's Challenge Zoo Visitors\n")
 visfileout.write("====================================\n\n")
 visfileout.write("Zoo Visitors\n")
 visfileout.write("=============\n\n")
 for visitor in list_of_visitors:
-    message = (visitor.name + " visited the zoo today." + f" They left with ${visitor.money}." + f" Their favorite habitat to visit was the {habitats[visitor.habitat_to_visit]} habitat. Their favorite animal was{visitor.favname}. \n")
-    # Remove the leading space from the visitor names. It was useful before, now it's not.
-    visfileout.write(message.lstrip(" "))
+    if visitor.money >= 10:
+        visitor.money = visitor.money - 10
+        message = (visitor.name + " visited the zoo today." + f" They left with ${visitor.money}." + f" Their favorite habitat to visit was the {habitats[visitor.habitat_to_visit]} habitat. Their favorite animal was{visitor.favname}. \n")
+        # Remove the leading space from the visitor names. It was useful before, now it's not.
+        visfileout.write(message.lstrip(" "))
+    else:
+        message = (visitor.name + " did not have enough money to visit the zoo today. \n")
+        visfileout.write(message.lstrip(" "))
+
